@@ -28,6 +28,9 @@ public class Navigation {
             case LOGIN:
                 resource = Navigation.class.getResource("/view/LoginForm.fxml");
                 break;
+            case ADMIN_LOGIN:
+                resource = Navigation.class.getResource("/view/AdminLoginForm.fxml");
+                break;
         }
         FXMLLoader fxmlLoader = new FXMLLoader(resource);
         Parent root = fxmlLoader.load();

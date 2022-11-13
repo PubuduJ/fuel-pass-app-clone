@@ -3,10 +3,13 @@ package controller;
 import javafx.animation.FadeTransition;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
+import util.Navigation;
+import util.Routes;
 
 import java.io.IOException;
 
@@ -36,9 +39,13 @@ public class HomeFormController {
     public void pneHome_OnKeyReleased(KeyEvent keyEvent) {
     }
 
-    public void pneLogin_OnKeyReleased(KeyEvent keyEvent) {
+    public void pneLogin_OnMouseClicked(MouseEvent mouseEvent) throws IOException {
+        Navigation.navigate(Routes.ADMIN_LOGIN);
     }
 
-    public void pneLogin_OnMouseClicked(MouseEvent mouseEvent) {
+    public void pneLogin_OnKeyReleased(KeyEvent keyEvent) throws IOException {
+        if (keyEvent.getCode() == KeyCode.ENTER || keyEvent.getCode() == KeyCode.SPACE) {
+            Navigation.navigate(Routes.WELCOME);
+        }
     }
 }
