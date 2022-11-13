@@ -20,6 +20,5 @@ public class AdminLoginFormController {
     }
 
     public void txtPassword_OnAction(ActionEvent actionEvent) {
-
     }
 }
