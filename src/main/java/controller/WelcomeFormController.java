@@ -27,6 +27,7 @@ public class WelcomeFormController {
         Navigation.navigate(Routes.REGISTRATION);
     }
 
-    public void btnLogin_OnAction(ActionEvent actionEvent) {
+    public void btnLogin_OnAction(ActionEvent actionEvent) throws IOException {
+        Navigation.navigate(Routes.LOGIN);
     }
 }

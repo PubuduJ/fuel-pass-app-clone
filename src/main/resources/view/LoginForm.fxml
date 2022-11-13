@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane fx:id="pneLoginForm" prefHeight="383.0" prefWidth="684.0" style="-fx-background-color: lightgrey;" stylesheets="@../style/login-form.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="16.0" prefHeight="351.0" prefWidth="657.0" style="-fx-background-color: white; -fx-background-radius: 10;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <Label alignment="CENTER" layoutY="21.0" text="LOGIN" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="Cantarell Bold" size="40.0" />
+               </font>
+            </Label>
+            <FlowPane alignment="CENTER" hgap="5.0" layoutY="78.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Label text="Don't have an account ?">
+                     <font>
+                        <Font name="Cantarell Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label id="lblRegister" onMouseClicked="#lblRegister_OnMouseClicked" text="Register Here">
+                     <font>
+                        <Font name="Cantarell Bold" size="22.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </FlowPane>
+            <TextFlow layoutY="152.0" prefHeight="14.0" prefWidth="329.0" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Label text="Enter your NIC Number">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text=" *" textFill="RED">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </TextFlow>
+            <FlowPane alignment="CENTER" layoutX="80.0" layoutY="203.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <TextField fx:id="txtNIC" alignment="CENTER" prefHeight="26.0" prefWidth="276.0" />
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER" layoutY="246.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Button id="btnLogin" fx:id="btnLogin" mnemonicParsing="false" onAction="#btnLogin_OnAction" text="LOGIN">
+                     <font>
+                        <Font name="Cantarell Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </FlowPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
