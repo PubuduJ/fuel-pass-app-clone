@@ -1,0 +1,4 @@
+.btn:hover, .btn:focused {
+    -fx-text-fill: blue;
+    -fx-border-color: blue !important;
+}

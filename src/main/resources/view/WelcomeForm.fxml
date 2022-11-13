@@ -1,14 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.WelcomeFormController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane fx:id="pneWelcome" prefHeight="563.0" prefWidth="470.0" style="-fx-background-color: #f0f0f0;" stylesheets="@../style/welcome-form.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.WelcomeFormController">
+   <children>
+      <Label alignment="CENTER" layoutX="170.0" layoutY="14.0" text="NATIONAL FUEL PASS" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0">
+         <font>
+            <Font name="Cantarell Bold" size="40.0" />
+         </font>
+      </Label>
+      <FlowPane alignment="CENTER" hgap="10.0" layoutX="213.0" layoutY="84.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
+         <children>
+            <Button fx:id="btnRegister" mnemonicParsing="false" onAction="#btnRegister_OnAction" prefHeight="65.0" prefWidth="118.0" style="-fx-background-color: white; -fx-border-color: lightgrey; -fx-background-radius: 5; -fx-border-radius: 5;" styleClass="btn" text="Register">
+               <font>
+                  <Font name="Cantarell Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnLogin" mnemonicParsing="false" onAction="#btnLogin_OnAction" prefHeight="65.0" prefWidth="118.0" style="-fx-background-color: white; -fx-border-color: lightgrey; -fx-background-radius: 5; -fx-border-radius: 5;" styleClass="btn" text="Login">
+               <font>
+                  <Font name="Cantarell Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </FlowPane>
+      <Separator layoutX="14.0" layoutY="161.0" prefHeight="0.0" prefWidth="650.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="158.0" />
+      <Label layoutX="14.0" layoutY="164.0" text="Things to note prior to Registration" AnchorPane.topAnchor="165.0">
+         <font>
+            <Font name="Cantarell Extra Bold" size="16.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="26.0" layoutY="192.0" prefHeight="195.0" prefWidth="642.0" style="-fx-background-color: white; -fx-background-radius: 5;" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="218.0">
+         <children>
+            <VBox spacing="1.0">
+               <children>
+                  <Label text="BIKE" />
+                  <Label text="3WHEEL" />
+                  <Label text="QUADRICYCLE" />
+                  <Label text="CAR" />
+                  <Label text="VAN" />
+                  <Label text="BUS" />
+                  <Label text="LORRY" />
+                  <Label />
+                  <Label text="SPECIAL PURPOSE VEHICLE" />
+                  <Label text="LAND VEHICLE" />
+               </children>
+               <padding>
+                  <Insets bottom="3.0" left="5.0" top="3.0" />
+               </padding>
+            </VBox>
+            <VBox layoutX="184.0" spacing="1.0">
+               <children>
+                  <Label text="| MOTOR CYCLE" />
+                  <Label text="| MOTOR TRICYCLE / MOTOR TRICYCLE VAN" />
+                  <Label text="| QUADRICYCLE" />
+                  <Label text="| MOTOR CAR / INVALID CARRIAGE" />
+                  <Label text="| DUAL PURPOSE VEHICLE" />
+                  <Label text="| MOTOR COACH / PRIVATE COACH / OMINI BUS" />
+                  <Label text="| MOTOR LORRY / DUAL PURPOSE / LIGHT MOTOR LORRY / " />
+                  <Label text="M/LORRY(PRIME MOVER) / AMBULANCE / HEARSE" />
+                  <Label text="| LAND VEHICLE / SPECIAL PURPOSE VEHICLE" />
+                  <Label text="| HAND TRACTOR" />
+               </children>
+               <padding>
+                  <Insets bottom="3.0" right="5.0" top="3.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <VBox layoutX="14.0" layoutY="423.0" spacing="5.0" AnchorPane.topAnchor="420.0">
+         <children>
+            <TextFlow prefHeight="21.0" prefWidth="741.0">
+               <children>
+                  <Label text="✔️ " textFill="RED">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Only one NIC number is allowed per vehicle." />
+               </children>
+            </TextFlow>
+            <TextFlow prefHeight="20.0" prefWidth="741.0">
+               <children>
+                  <Label text="✔️ " textFill="RED">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="At registration NIC/Name/Address does not require to match Certificate of registration ownership details." />
+               </children>
+            </TextFlow>
+            <TextFlow prefHeight="38.0" prefWidth="741.0">
+               <children>
+                  <Label text="✔️ " textFill="RED">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Company and Government vehicles/bikes can also be registered under NIC per vehicle only," />
+                  <Label text="     Multiple vehicle registrations will be allowed shortly." />
+               </children>
+            </TextFlow>
+            <TextFlow prefHeight="18.0" prefWidth="741.0">
+               <children>
+                  <Label text="✔️ " textFill="RED">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Fuel Quota allocation will be based on vehicle category. Allocation will be announced by Ministry of Power &amp; Energy." />
+               </children>
+            </TextFlow>
+            <TextFlow prefHeight="21.0" prefWidth="741.0">
+               <children>
+                  <Label text="✔️ " textFill="RED">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Call 1919 for any registration related assistance." />
+               </children>
+            </TextFlow>
+         </children>
+      </VBox>
+      <TextFlow layoutX="14.0" layoutY="199.0" prefHeight="21.0" prefWidth="741.0" AnchorPane.topAnchor="192.0">
+         <children>
+            <Label text="✔️ " textFill="RED">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text=" Vehicle category to be selected as per Certificate of Registration of Motor Vehicle. Applicable categories," />
+         </children>
+      </TextFlow>
+   </children>
 </AnchorPane>
