@@ -1,14 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.HomeFormController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane fx:id="pneHomeForm" focusTraversable="true" prefHeight="490.0" prefWidth="684.0" style="-fx-background-color: white;" stylesheets="@../style/home-form.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeFormController">
+   <children>
+      <AnchorPane id="imgContainer" focusTraversable="true" layoutX="14.0" layoutY="14.0" onKeyReleased="#pneHome_OnKeyReleased" prefHeight="53.0" prefWidth="200.0" AnchorPane.leftAnchor="14.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="8.0" onMouseClicked="#imgLogo_OnMouseClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/logo.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </AnchorPane>
+      <AnchorPane id="imgContainer" fx:id="pneLogin" focusTraversable="true" layoutX="617.0" layoutY="9.0" onKeyReleased="#pneLogin_OnKeyReleased" onMouseClicked="#pneLogin_OnMouseClicked" AnchorPane.rightAnchor="14.0">
+         <children>
+            <ImageView fitHeight="53.0" fitWidth="55.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/lock.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pneContainer" layoutY="81.0" prefHeight="383.0" prefWidth="684.0" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0" />
+      <FlowPane alignment="CENTER" hgap="10.0" layoutX="250.0" layoutY="466.0" prefHeight="23.0" prefWidth="684.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <ImageView fitHeight="26.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/ceypetco.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="22.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/ijse.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/ioc.png" />
+               </image>
+            </ImageView>
+         </children>
+      </FlowPane>
+   </children>
 </AnchorPane>
