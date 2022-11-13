@@ -19,7 +19,10 @@ AppInitializer extends Application {
     public void start(Stage primaryStage) throws IOException {
         Parent root = FXMLLoader.load(this.getClass().getResource("/view/SplashScreenForm.fxml"));
         Scene scene = new Scene(root);
+        scene.setFill(Color.TRANSPARENT);
         primaryStage.setScene(scene);
+        primaryStage.initStyle(StageStyle.TRANSPARENT);
+        primaryStage.setResizable(false);
         primaryStage.centerOnScreen();
         primaryStage.show();
     }

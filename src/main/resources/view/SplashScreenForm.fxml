@@ -1,14 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.SplashScreenFormController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="355.0" prefWidth="563.0" style="-fx-background-color: rgba(0,0,0,0);" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SplashScreenFormController">
+   <children>
+      <AnchorPane layoutY="51.0" prefHeight="315.0" prefWidth="563.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0">
+         <children>
+            <Circle fill="WHITE" layoutX="101.0" layoutY="65.0" radius="97.0" stroke="BLACK" strokeType="INSIDE" />
+            <AnchorPane prefHeight="315.0" prefWidth="563.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="271.0" layoutX="23.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/logo.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="23.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/fuelStation.png" />
+                     </image>
+                  </ImageView>
+                  <VBox layoutX="188.9199981689453" layoutY="14.0" spacing="3.0">
+                     <children>
+                        <Label prefHeight="42.0" prefWidth="357.0" text="National Fuel Pass App">
+                           <font>
+                              <Font name="Cantarell Bold" size="33.0" />
+                           </font>
+                        </Label>
+                        <Label text="                       " />
+                        <Label prefHeight="25.0" prefWidth="52.0" text="v1.0.0">
+                           <font>
+                              <Font name="Cantarell Extra Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblStatus" prefHeight="18.0" prefWidth="363.0" text="Welcome to National Fuel Pass App...!">
+                           <font>
+                              <Font name="Cantarell Extra Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="495.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/ceypetco.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="60.0" fitWidth="64.0" layoutX="435.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/ioc.png" />
+                     </image>
+                  </ImageView>
+                  <Rectangle fx:id="pgbContainer" fill="#3790e4" height="5.0" layoutY="286.0" stroke="#10a6f2" strokeType="INSIDE" strokeWidth="0.0" width="563.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-1.0" />
+                  <Rectangle fx:id="pgbLoad" fill="#0eab13" height="5.0" layoutY="286.0" stroke="#219723" strokeType="INSIDE" width="32.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
 </AnchorPane>
