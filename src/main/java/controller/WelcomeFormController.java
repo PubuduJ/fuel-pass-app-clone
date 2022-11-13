@@ -5,6 +5,10 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
+import util.Navigation;
+import util.Routes;
+
+import java.io.IOException;
 
 public class WelcomeFormController {
 
@@ -19,7 +23,8 @@ public class WelcomeFormController {
         fd.playFromStart();
     }
 
-    public void btnRegister_OnAction(ActionEvent actionEvent) {
+    public void btnRegister_OnAction(ActionEvent actionEvent) throws IOException {
+        Navigation.navigate(Routes.REGISTRATION);
     }
 
     public void btnLogin_OnAction(ActionEvent actionEvent) {

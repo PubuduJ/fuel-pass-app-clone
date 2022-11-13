@@ -22,6 +22,9 @@ public class Navigation {
             case WELCOME:
                 resource = Navigation.class.getResource("/view/WelcomeForm.fxml");
                 break;
+            case REGISTRATION:
+                resource = Navigation.class.getResource("/view/RegisterForm.fxml");
+                break;
         }
         FXMLLoader fxmlLoader = new FXMLLoader(resource);
         Parent root = fxmlLoader.load();

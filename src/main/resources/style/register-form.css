@@ -1,0 +1,15 @@
+#lblLogin {
+    -fx-text-fill: #4934FF !important;
+}
+#lblLogin:hover, #lblLogin:focused {
+    -fx-text-fill: #2212B3 !important;
+}
+#btnRegister:hover, #btnRegister:focused {
+    -fx-background-color: #2212B3 !important;
+}
+#btnRegister {
+    -fx-background-color: #4934FF !important;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-text-fill: white;
+}
