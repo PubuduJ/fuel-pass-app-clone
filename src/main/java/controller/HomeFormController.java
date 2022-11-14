@@ -35,15 +35,17 @@ public class HomeFormController {
     public void imgLogo_OnMouseClicked(MouseEvent mouseEvent) throws IOException {
         initialize();
     }
-
-    public void pneHome_OnKeyReleased(KeyEvent keyEvent) {
-    }
-
     public void pneLogin_OnMouseClicked(MouseEvent mouseEvent) throws IOException {
         Navigation.navigate(Routes.ADMIN_LOGIN);
     }
 
     public void pneLogin_OnKeyReleased(KeyEvent keyEvent) throws IOException {
+        if (keyEvent.getCode() == KeyCode.ENTER || keyEvent.getCode() == KeyCode.SPACE) {
+            pneLogin_OnMouseClicked(null);
+        }
+    }
+
+    public void pneHome_OnKeyReleased(KeyEvent keyEvent) throws IOException {
         if (keyEvent.getCode() == KeyCode.ENTER || keyEvent.getCode() == KeyCode.SPACE) {
             Navigation.navigate(Routes.WELCOME);
         }
