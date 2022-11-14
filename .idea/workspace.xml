@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d1ad91cc-6d62-464e-ba97-26d7687b5c4f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/RegisterFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/RegisterFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/UserDashboardFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/UserDashboardFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/UserDashboardForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/UserDashboardForm.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,22 +38,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last.edited.regexp&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/pubudu/Documents/Git Projects/fuel app/national-fuel-pass-app/src/main/resources/audio&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last.edited.regexp": "941692w58v",
+    "last_opened_file_path": "/home/pubudu/Documents/Git Projects/fuel app/national-fuel-pass-app/src/main/resources/audio",
+    "list.type.of.created.stylesheet": "CSS",
+    "nodejs_package_manager_path": "npm"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/audio" />
@@ -98,6 +100,7 @@
       <workItem from="1668400451661" duration="3431000" />
       <workItem from="1668419074463" duration="2890000" />
       <workItem from="1668424351422" duration="4129000" />
+      <workItem from="1668443300412" duration="3069000" />
     </task>
     <servers />
   </component>

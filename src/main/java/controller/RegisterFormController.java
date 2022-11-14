@@ -102,7 +102,7 @@ public class RegisterFormController {
         try {
             Connection connection = DBConnection.getInstance().getSingletonConnection();
             PreparedStatement stm = connection.prepareStatement("INSERT INTO User (nic,first_name,last_name,address,quota) VALUES (?,?,?,?,?)");
-            stm.setString(1,dto.getNic());
+            stm.setString(1,dto.getNic().toUpperCase());
             stm.setString(2,dto.getFirstName());
             stm.setString(3,dto.getLastName());
             stm.setString(4,dto.getAddress());
@@ -116,7 +116,6 @@ public class RegisterFormController {
             else {
                 new Alert(Alert.AlertType.ERROR, "Fail to save the user in to the database").showAndWait();
             }
-            connection.close();
         } catch (SQLException e) {
             new Alert(Alert.AlertType.ERROR,"NIC is already existed, Please double check your NIC").showAndWait();
             txtNIC.requestFocus();

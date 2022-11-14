@@ -25,7 +25,7 @@
                <children>
                   <ImageView fx:id="imgQR" fitHeight="225.0" fitWidth="218.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../fuel-pass-app-clone/src/main/resources/images/qrCode.png" />
+                        <Image url="@../img/qrCode.png" />
                      </image>
                   </ImageView>
                   <VBox spacing="5.0">
