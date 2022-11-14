@@ -1,0 +1,21 @@
+#btnDownload {
+    -fx-text-fill: white;
+    -fx-background-color: #CC5F00;
+}
+#btnDownload:hover, #btnDownload:focused {
+    -fx-background-color: #853F00 !important;
+}
+#btnPrint {
+    -fx-text-fill: white;
+    -fx-background-color: #5500CC;
+}
+#btnPrint:hover, #btnPrint:focused {
+    -fx-background-color: #39008A !important;
+}
+#btnLogOut {
+    -fx-text-fill: white;
+    -fx-background-color: #4934FF;
+}
+#btnLogOut:hover, #btnLogOut:focused {
+    -fx-background-color: #2212B3 !important;
+}

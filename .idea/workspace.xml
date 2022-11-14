@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1ad91cc-6d62-464e-ba97-26d7687b5c4f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/WelcomeForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/WelcomeForm.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="d1ad91cc-6d62-464e-ba97-26d7687b5c4f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,9 +15,9 @@
       <list>
         <option value="JavaFXApplication" />
         <option value="Enum" />
+        <option value="CSS File" />
         <option value="FxmlFile" />
         <option value="Class" />
-        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -86,6 +84,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668341591433</updated>
       <workItem from="1668341593178" duration="5723000" />
+      <workItem from="1668354134293" duration="2533000" />
     </task>
     <servers />
   </component>

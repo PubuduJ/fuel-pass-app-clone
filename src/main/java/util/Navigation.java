@@ -31,6 +31,9 @@ public class Navigation {
             case ADMIN_LOGIN:
                 resource = Navigation.class.getResource("/view/AdminLoginForm.fxml");
                 break;
+            case DASHBOARD:
+                resource = Navigation.class.getResource("/view/UserDashboardForm.fxml");
+                break;
         }
         FXMLLoader fxmlLoader = new FXMLLoader(resource);
         Parent root = fxmlLoader.load();

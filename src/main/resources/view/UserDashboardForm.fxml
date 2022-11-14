@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane fx:id="pneDashboardContainer" prefHeight="383.0" prefWidth="684.0" style="-fx-background-color: lightgrey;" stylesheets="@../style/user-dashboard-form.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserDashboardFormController">
+   <children>
+      <AnchorPane layoutX="109.0" layoutY="27.0" prefHeight="299.0" prefWidth="481.0" style="-fx-background-color: white; -fx-background-radius: 10;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <Label alignment="CENTER" layoutY="14.0" style="-fx-background-color: black; -fx-text-fill: white; -fx-padding: 5;" text="User Dashboard" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+               <font>
+                  <Font name="Cantarell Bold" size="30.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" layoutY="70.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <ImageView fx:id="imgQR" fitHeight="225.0" fitWidth="218.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../fuel-pass-app-clone/src/main/resources/images/qrCode.png" />
+                     </image>
+                  </ImageView>
+                  <VBox spacing="5.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="289.0" text="    ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextFlow prefHeight="31.0" prefWidth="153.0">
+                           <children>
+                              <Label text="Quota:  ">
+                                 <font>
+                                    <Font name="Cantarell Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblQuota" text="16 L" textFill="#f20303">
+                                 <font>
+                                    <Font name="Cantarell Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </TextFlow>
+                        <Label prefHeight="18.0" prefWidth="295.0" text="    ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="21.0" prefWidth="440.0" spacing="5.0">
+                           <children>
+                              <Label text="Name:">
+                                 <font>
+                                    <Font name="Cantarell Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblName" prefHeight="21.0" prefWidth="374.0" text="Kasun Sandaruwan" textFill="#3004f2" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font name="Cantarell Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox spacing="5.0">
+                           <children>
+                              <Label text="NIC number:">
+                                 <font>
+                                    <Font name="Cantarell Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblNIC" prefHeight="21.0" prefWidth="330.0" text="123456789V" textFill="#3004f2" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font name="Cantarell Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="21.0" prefWidth="359.0" spacing="5.0">
+                           <children>
+                              <Label text="Address:">
+                                 <font>
+                                    <Font name="Cantarell Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblAddress" prefHeight="21.0" prefWidth="360.0" text="Galle Road, Panadura" textFill="#3004f2" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font name="Cantarell Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutY="288.0" spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Button id="btnDownload" fx:id="btnDownload" mnemonicParsing="false" onAction="#btnDownload_OnAction" prefHeight="31.0" prefWidth="160.0" text="Download">
+                     <font>
+                        <Font name="Cantarell Bold" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="btnPrint" fx:id="btnPrint" mnemonicParsing="false" onAction="#btnPrint_OnAction" prefHeight="31.0" prefWidth="160.0" text="Print">
+                     <font>
+                        <Font name="Cantarell Bold" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="btnLogOut" fx:id="btnLogOut" mnemonicParsing="false" onAction="#btnLogOut_OnAction" prefHeight="26.0" prefWidth="160.0" text="Log Out">
+                     <font>
+                        <Font name="Cantarell Bold" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
