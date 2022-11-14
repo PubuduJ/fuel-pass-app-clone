@@ -57,7 +57,6 @@ public class LoginFormController {
             else {
                 new Alert(Alert.AlertType.ERROR,"NIC number does not exist in the data base, Register first !! You will be redirected to Registration Form").showAndWait();
                 lblRegister_OnMouseClicked(null);
-                return;
             }
         } catch (SQLException e) {
             new Alert(Alert.AlertType.ERROR, "Something went wrong").showAndWait();
