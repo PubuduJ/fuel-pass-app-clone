@@ -17,7 +17,7 @@ public class Navigation {
 
     public static Object navigate(Routes route) throws IOException {
         pneContainer.getChildren().clear();
-        URL resource = null;
+        URL resource;
         switch (route) {
             case WELCOME:
                 resource = Navigation.class.getResource("/view/WelcomeForm.fxml");
@@ -34,6 +34,8 @@ public class Navigation {
             case DASHBOARD:
                 resource = Navigation.class.getResource("/view/UserDashboardForm.fxml");
                 break;
+            default:
+                resource = Navigation.class.getResource("/view/ControlCenterForm.fxml");
         }
         FXMLLoader fxmlLoader = new FXMLLoader(resource);
         Parent root = fxmlLoader.load();

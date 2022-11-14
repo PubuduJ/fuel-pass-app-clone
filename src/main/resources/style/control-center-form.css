@@ -1,0 +1,14 @@
+#btnUpdate {
+    -fx-background-color: #00CC50;
+    -fx-text-fill: white;
+}
+#btnUpdate:hover, #btnUpdate:focused {
+    -fx-background-color: #008033 !important;
+}
+#btnRemove {
+    -fx-background-color: #CC0300;
+    -fx-text-fill: white;
+}
+#btnRemove:hover, #btnRemove:focused {
+    -fx-background-color: #800300 !important;
+}
