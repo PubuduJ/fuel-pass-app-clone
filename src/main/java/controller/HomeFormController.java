@@ -35,6 +35,7 @@ public class HomeFormController {
     public void imgLogo_OnMouseClicked(MouseEvent mouseEvent) throws IOException {
         initialize();
     }
+
     public void pneLogin_OnMouseClicked(MouseEvent mouseEvent) throws IOException {
         Navigation.navigate(Routes.ADMIN_LOGIN);
     }
