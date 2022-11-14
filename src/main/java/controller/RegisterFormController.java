@@ -1,5 +1,7 @@
 package controller;
 
+import db.DBConnection;
+import dto.UserDTO;
 import javafx.animation.FadeTransition;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
@@ -17,6 +19,9 @@ import util.Navigation;
 import util.Routes;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class RegisterFormController {
     public AnchorPane pneRegisterForm;
@@ -64,7 +69,7 @@ public class RegisterFormController {
         Navigation.navigate(Routes.LOGIN);
     }
 
-    public void btnRegister_OnAction(ActionEvent actionEvent) {
+    public void btnRegister_OnAction(ActionEvent actionEvent) throws IOException {
         String firstName = txtFirstName.getText();
         String lastName = txtLastName.getText();
         if (firstName.isBlank()) {
@@ -91,6 +96,31 @@ public class RegisterFormController {
             txtAddress.requestFocus();
             txtAddress.selectAll();
             return;
+        }
+        UserDTO dto = new UserDTO(txtNIC.getText(), txtFirstName.getText(), txtLastName.getText(), txtAddress.getText(), 16);
+
+        try {
+            Connection connection = DBConnection.getInstance().getSingletonConnection();
+            PreparedStatement stm = connection.prepareStatement("INSERT INTO User (nic,first_name,last_name,address,quota) VALUES (?,?,?,?,?)");
+            stm.setString(1,dto.getNic());
+            stm.setString(2,dto.getFirstName());
+            stm.setString(3,dto.getLastName());
+            stm.setString(4,dto.getAddress());
+            stm.setInt(5,dto.getQuota());
+            int affectedRows = stm.executeUpdate();
+
+            if (affectedRows == 1) {
+                new Alert(Alert.AlertType.INFORMATION,"Registration is success, You will be redirected to Login Form").showAndWait();
+                lblLogin_OnMouseClicked(null);
+            }
+            else {
+                new Alert(Alert.AlertType.ERROR, "Fail to save the user in to the database").showAndWait();
+            }
+            connection.close();
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR,"NIC is already existed, Please double check your NIC").showAndWait();
+            txtNIC.requestFocus();
+            txtNIC.selectAll();
         }
     }
 
