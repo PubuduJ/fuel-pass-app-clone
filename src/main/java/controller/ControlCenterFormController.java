@@ -16,6 +16,7 @@ import javafx.util.Duration;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Optional;
 
 public class ControlCenterFormController {
     public AnchorPane pneControlCenter;
@@ -70,9 +71,21 @@ public class ControlCenterFormController {
             updateUser(user);
         }
         tblUsers.refresh();
+        tblUsers.getSelectionModel().clearSelection();
     }
 
     public void btnRemoveUsers_OnAction(ActionEvent actionEvent) {
+        Optional<ButtonType> buttonType = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure to delete these users ?", ButtonType.YES, ButtonType.NO).showAndWait();
+        if (buttonType.get() == ButtonType.NO) {
+            tblUsers.getSelectionModel().clearSelection();
+            return;
+        }
+        ObservableList<UserDTO> selectedUsers = tblUsers.getSelectionModel().getSelectedItems();
+        for (UserDTO user : selectedUsers) {
+            removeUser(user);
+        }
+        tblUsers.getItems().removeAll(selectedUsers);
+        tblUsers.getSelectionModel().clearSelection();
     }
 
     private ArrayList<UserDTO> loadAllUsers() {
@@ -136,14 +149,31 @@ public class ControlCenterFormController {
 
             int affectedRows = stm.executeUpdate();
             if (affectedRows == 1) {
-                System.out.println("Success");
+                new Alert(Alert.AlertType.INFORMATION, "Users were successfully updated in the database");
             }
             else {
-                System.out.println("Something went wrong");
+                new Alert(Alert.AlertType.ERROR,"Something went wrong!");
             }
         } catch (SQLException e) {
             e.printStackTrace();
             new Alert(Alert.AlertType.ERROR,"Something went wrong!");
+        }
+    }
+
+    private void removeUser(UserDTO user) {
+        try {
+            Connection connection = DBConnection.getInstance().getSingletonConnection();
+            PreparedStatement stm = connection.prepareStatement("DELETE FROM User WHERE nic=?");
+            stm.setString(1, user.getNic());
+            int affectedRows = stm.executeUpdate();
+            if (affectedRows == 1) {
+                new Alert(Alert.AlertType.INFORMATION, "Users were successfully removed from the database");
+            }
+            else {
+                new Alert(Alert.AlertType.ERROR,"Something went wrong!");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 }
