@@ -16,15 +16,16 @@ import util.Routes;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URISyntaxException;
 import java.net.URL;
 
 public class AdminLoginFormController {
+    private static int attempts = 3;
+    private static final String ADMIN_PASSWORD = "admin";
     public AnchorPane pneAdminLoginForm;
     public PasswordField txtPassword;
 
-    private static final String ADMIN_PASSWORD = "admin";
 
-    private static int attempts = 3;
 
     public void initialize() {
         FadeTransition fd = new FadeTransition(Duration.millis(1000),pneAdminLoginForm);
@@ -34,14 +35,14 @@ public class AdminLoginFormController {
         Platform.runLater(txtPassword::requestFocus);
     }
 
-    public void txtPassword_OnAction(ActionEvent actionEvent) throws IOException {
+    public void txtPassword_OnAction(ActionEvent actionEvent) throws IOException, URISyntaxException {
         if (!txtPassword.getText().equals(ADMIN_PASSWORD)) {
             if (attempts == 0) {
                 new Alert(Alert.AlertType.ERROR,"You have reached maximum number of attempts...").showAndWait();
                 Platform.exit();
                 return;
             }
-            URL resource = this.getClass().getResource("/audio/alertSound.mp3");
+            URL resource = this.getClass().getResource("/audios/alertSound.mp3");
             Media media = new Media(resource.toString());
             MediaPlayer mediaPlayer = new MediaPlayer(media);
             mediaPlayer.play();
@@ -49,7 +50,7 @@ public class AdminLoginFormController {
             Alert alert = new Alert(Alert.AlertType.ERROR, "Invalid Admin Password. You have " + attempts + " more attempts to try again");
             attempts -= 1;
 
-            InputStream resourceAsStream = this.getClass().getResourceAsStream("/img/padlock.png");
+            InputStream resourceAsStream = this.getClass().getResourceAsStream("/images/padlock.png");
             Image image = new Image(resourceAsStream);
             ImageView imageView = new ImageView(image);
             imageView.setFitWidth(45);
