@@ -91,7 +91,8 @@ public class ControlCenterFormController {
                 users.add(user);
             }
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
+            new Alert(Alert.AlertType.ERROR,"Something went wrong!");
         }
         return users;
     }
@@ -121,6 +122,7 @@ public class ControlCenterFormController {
         }
         catch (SQLException e) {
             e.printStackTrace();
+            new Alert(Alert.AlertType.ERROR,"Something went wrong!");
         }
         return users;
     }
@@ -140,7 +142,8 @@ public class ControlCenterFormController {
                 System.out.println("Something went wrong");
             }
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
+            new Alert(Alert.AlertType.ERROR,"Something went wrong!");
         }
     }
 }
