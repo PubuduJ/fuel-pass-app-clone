@@ -2,11 +2,20 @@
 
 A Java FX application clone of the [fuelpass.gov.lk](https://fuelpass.gov.lk/)
 
+The Information and Communication Technology Agency (ICTA) and the Ministry of Power and Energy together created the national 
+fuel pass app to provide Sri Lanka with the best possible response to the country's fuel shortages.
+This clone application was created exclusively for educational purposes, 
+in order to understand and improve the software development skills.
+The whole design layout and images are copyright to their respective owners.
+
 #### Images of the user interfaces
 1. Splash screen<br>
    <img src="asset/img/splash-screen.png" alt="splash-screen" width="500px"/>
 
 2. Welcome-form<br>
+   The user-login and registration forms are linked via the welcome form's navigation buttons.
+   Using the padlock icon in the upper right corner, admin can access the admin login form.
+   By clicking the logo in the upper left corner of the welcome form, a user or an admin can always be sent back to the welcome form.<br>
    <img src="asset/img/welcome-form.png" alt="welcome-form" width="500px"/>
 
 3. Registration-form<br>
@@ -27,6 +36,7 @@ A Java FX application clone of the [fuelpass.gov.lk](https://fuelpass.gov.lk/)
 ## Used Technologies
 
 - Java SE 11
+- MySQL Community Server 8.0.31
 - Apache Maven 3.8.6
 - Added dependencies to pom.xml
     - javafx-fxml 18.0.1
@@ -40,10 +50,15 @@ A Java FX application clone of the [fuelpass.gov.lk](https://fuelpass.gov.lk/)
 
 ## How to use ?
 This project can be used by cloning the
-project to your local computer.
+project to your local computer. 
 
-#### Clone this repository
-1. Clone the project using `git clone https://github.com/PubuduJ/text-editor-application.git` terminal command.
+Make sure to create a "fuel_app_db" database in the MySQL community server 
+and add the table from the database-script.sql file to it. 
+
+To establish a singleton connection with the MySQL server, modify the DBConnection class mySQL user name and password.
+
+#### Clone the repository
+1. Clone the project using `git clone https://github.com/PubuduJ/fuel-pass-app-clone.git` terminal command.
 2. Open the `pom.xml` file from **IntelliJ IDEA**, make sure to open this as a project.
 3. To run this application execute `mvn javafx:run` goal or create separate maven configuration in **IntelliJ IDEA**.
 
