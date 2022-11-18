@@ -94,5 +94,5 @@ This project was carried out under the guidance of the [IJSE](https://www.ijse.l
 v1.0.0
 
 ## License
-Copyright &copy; 2022 [PubuduJ](https://www.linkedin.com/in/pubudujanith94/). All Rights Reserved.<br>
+Copyright &copy; 2022 [Pubudu Janith](https://www.linkedin.com/in/pubudujanith94/). All Rights Reserved.<br>
 This project is licensed under the [MIT license](LICENSE.txt).
