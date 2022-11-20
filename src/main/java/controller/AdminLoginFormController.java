@@ -21,7 +21,7 @@ import java.net.URL;
 
 public class AdminLoginFormController {
     private static int attempts = 3;
-    private static final String ADMIN_PASSWORD = "password";
+    private static final String ADMIN_PASSWORD = "admin123";
     public AnchorPane pneAdminLoginForm;
     public PasswordField txtPassword;
 
@@ -42,7 +42,7 @@ public class AdminLoginFormController {
                 Platform.exit();
                 return;
             }
-            URL resource = this.getClass().getResource("/audios/alertSound.mp3");
+            URL resource = this.getClass().getResource("/audio/alertSound.mp3");
             Media media = new Media(resource.toString());
             MediaPlayer mediaPlayer = new MediaPlayer(media);
             mediaPlayer.play();
@@ -50,7 +50,7 @@ public class AdminLoginFormController {
             Alert alert = new Alert(Alert.AlertType.ERROR, "Invalid Admin Password. You have " + attempts + " more attempts to try again");
             attempts -= 1;
 
-            InputStream resourceAsStream = this.getClass().getResourceAsStream("/images/padlock.png");
+            InputStream resourceAsStream = this.getClass().getResourceAsStream("/img/padlock.png");
             Image image = new Image(resourceAsStream);
             ImageView imageView = new ImageView(image);
             imageView.setFitWidth(45);
