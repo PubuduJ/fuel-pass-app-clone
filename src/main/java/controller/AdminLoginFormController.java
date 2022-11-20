@@ -21,7 +21,7 @@ import java.net.URL;
 
 public class AdminLoginFormController {
     private static int attempts = 3;
-    private static final String ADMIN_PASSWORD = "admin";
+    private static final String ADMIN_PASSWORD = "password";
     public AnchorPane pneAdminLoginForm;
     public PasswordField txtPassword;
 
@@ -61,7 +61,6 @@ public class AdminLoginFormController {
             alert.showAndWait();
 
             mediaPlayer.dispose();
-
             txtPassword.requestFocus();
             return;
         }
